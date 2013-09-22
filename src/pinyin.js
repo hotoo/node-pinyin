@@ -157,6 +157,11 @@ function pinyin(hans, options){
   var pys = [];
   for(var i=0,words,l=phrases.length; i<l; i++){
     words = phrases[i].w;
+    // 不处理非中文字符
+    if (!words.match(/^[\u4e00-\u9fff]+$/)){
+      pys.push([words]);
+      continue;
+    }
     if(words.length===1){
       pys.push(single_pinyin(words, options));
     }else{

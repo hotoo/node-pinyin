@@ -20,6 +20,12 @@ describe("单个汉字", function(){
   });
 });
 
+describe("中英文混合", function(){
+  it("中English", function(){
+    pinyin("中English").should.eql([['zhōng'], ['English']]);
+  });
+});
+
 console.log(pinyin('本票通【航旅专业版】',{
         style: pinyin.STYLE_NORMAL,
         heteronym: false
