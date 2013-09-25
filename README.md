@@ -1,4 +1,3 @@
-
 # 汉语拼音转换工具(JavaScript 版)
 
 将汉语转为拼音。可以用于汉字注音、排序、检索。
@@ -21,7 +20,7 @@ npm install pinyinjs
 ## 用法
 
 ```js
-var pinyin = require("pinyin");
+var pinyin = require("pinyinjs");
 
 console.log(pinyin("中心"));    // [ [ 'zhōng' ], [ 'xīn' ] ]
 console.log(pinyin("中心", {
